@@ -1,0 +1,160 @@
+{
+  "Sections": [
+    {
+      "Id": "sec-programming",
+      "Title": "Программирование на C#",
+      "Subsections": [
+        {
+          "Id": "sec-programming-1",
+          "Title": "Основы LINQ",
+          "Blocks": [
+            {
+              "Text": "LINQ (Language Integrated Query) — это мощный язык запросов, встроенный в C#. Позволяет писать декларативный код для работы с коллекциями, базами данных и XML.",
+              "ImageUrl": "https://picsum.photos/id/0/800/400"
+            },
+            {
+              "Text": "Пример фильтрации: var adults = people.Where(p => p.Age >= 18).ToList();",
+              "ImageUrl": null
+            },
+            {
+              "Text": "LINQ бывает двух видов: Query Syntax (похож на SQL) и Method Syntax (цепочки методов). Method Syntax более гибкий и мощный.",
+              "ImageUrl": "https://picsum.photos/id/26/800/400"
+            }
+          ]
+        },
+        {
+          "Id": "sec-programming-2",
+          "Title": "Асинхронное программирование",
+          "Blocks": [
+            {
+              "Text": "Ключевые слова async и await позволяют писать асинхронный код, который не блокирует поток UI. Приложение остается отзывчивым во время долгих операций.",
+              "ImageUrl": "https://picsum.photos/id/91/800/400"
+            },
+            {
+              "Text": "Важно: async void допустим только для событий и команд. В остальных случаях используйте async Task.",
+              "ImageUrl": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "sec-avalonia",
+      "Title": "Avalonia UI",
+      "Subsections": [
+        {
+          "Id": "sec-avalonia-1",
+          "Title": "Привязка данных (Binding)",
+          "Blocks": [
+            {
+              "Text": "Avalonia использует мощную систему привязок. Пример: <TextBlock Text=\"{Binding UserName}\"/> автоматически обновляется при изменении свойства UserName в ViewModel.",
+              "ImageUrl": "https://picsum.photos/id/42/800/400"
+            },
+            {
+              "Text": "Двусторонняя привязка: <TextBox Text=\"{Binding UserName, Mode=TwoWay}\"/> позволяет изменять данные из UI.",
+              "ImageUrl": null
+            }
+          ]
+        },
+        {
+          "Id": "sec-avalonia-2",
+          "Title": "Стили и темы",
+          "Blocks": [
+            {
+              "Text": "Avalonia поддерживает CSS-подобные стили. Можно создавать глобальные темы и переопределять стили конкретных элементов.",
+              "ImageUrl": "https://picsum.photos/id/77/800/400"
+            },
+            {
+              "Text": "Fluent Theme — официальная тема от Microsoft, имитирующая стиль Windows 11.",
+              "ImageUrl": "https://picsum.photos/id/96/800/400"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "sec-mvvm",
+      "Title": "MVVM Паттерн",
+      "Subsections": [
+        {
+          "Id": "sec-mvvm-1",
+          "Title": "Что такое MVVM",
+          "Blocks": [
+            {
+              "Text": "Model-View-ViewModel — архитектурный паттерн, разделяющий приложение на три слоя: Model (данные), View (интерфейс) и ViewModel (логика).",
+              "ImageUrl": "https://picsum.photos/id/0/800/400"
+            },
+            {
+              "Text": "View не знает о Model, ViewModel не знает о View. Это упрощает тестирование и поддержку кода.",
+              "ImageUrl": "https://picsum.photos/id/26/800/400"
+            }
+          ]
+        },
+        {
+          "Id": "sec-mvvm-2",
+          "Title": "CommunityToolkit.Mvvm",
+          "Blocks": [
+            {
+              "Text": "Библиотека предоставляет source generators для автоматической генерации INotifyPropertyChanged и RelayCommand. Используйте [ObservableProperty] для свойств и [RelayCommand] для методов.",
+              "ImageUrl": "https://picsum.photos/id/42/800/400"
+            },
+            {
+              "Text": "Пример: [ObservableProperty] private string _userName; автоматически создаст свойство UserName с уведомлениями.",
+              "ImageUrl": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "sec-mobile",
+      "Title": "Мобильная разработка",
+      "Subsections": [
+        {
+          "Id": "sec-mobile-1",
+          "Title": "Особенности Android",
+          "Blocks": [
+            {
+              "Text": "На Android важно обрабатывать системную кнопку \"Назад\". Это делается через событие BackRequested у TopLevel.",
+              "ImageUrl": "https://picsum.photos/id/20/800/400"
+            },
+            {
+              "Text": "Используйте отдельные стили для сенсорного ввода: минимальная высота кнопок 48dp, отступы не менее 8dp.",
+              "ImageUrl": null
+            }
+          ]
+        },
+        {
+          "Id": "sec-mobile-2",
+          "Title": "Адаптивный дизайн",
+          "Blocks": [
+            {
+              "Text": "Используйте VisualStateManager для адаптации под разные размеры экрана. На телефонах скрывайте второстепенные элементы, на планшетах показывайте их.",
+              "ImageUrl": "https://picsum.photos/id/91/800/400"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "sec-json",
+      "Title": "Работа с JSON в .NET",
+      "Subsections": [
+        {
+          "Id": "sec-json-1",
+          "Title": "System.Text.Json",
+          "Blocks": [
+            {
+              "Text": "Современная библиотека от Microsoft. Быстрее и эффективнее Newtonsoft.Json. Используйте JsonSerializer.Serialize и JsonSerializer.Deserialize.",
+              "ImageUrl": "https://picsum.photos/id/96/800/400"
+            },
+            {
+              "Text": "Опции: PropertyNameCaseInsensitive = true игнорирует регистр, AllowTrailingCommas = true позволяет запятые в конце массивов.",
+              "ImageUrl": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
